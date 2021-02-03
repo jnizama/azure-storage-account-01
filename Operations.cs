@@ -23,7 +23,7 @@ public static class OperationStorageAccount
                 BlobContainerClient container = new BlobContainerClient(connectionString, containerName);
                 container.CreateIfNotExists(); //create the container "images" if no exists
 
-                string blobName = "docs-and-friends-selfie-stick";
+                string blobName = "docs-and-friends-selfie-stick"; //
                 string fileName = "myphotos\\docs-and-friends-selfie-stick.png";
                 BlobClient blobClient = container.GetBlobClient(blobName);
                 blobClient.Upload(fileName, true); //the second param allow re-write if exists.
